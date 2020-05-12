@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <a href="delivery.html" class="btn">BACK</a>
+        <span id="thank">Thank</span>
+        <span id="you">You</span>
+        <span id="for">For</span>
+        <span id="your">Your</span>
+        <span id="order">Order!</span>
+    <fieldset id="contacts">
+        <legend><b>Contact information</b></legend>
+        <label>Name<input type="text" required id="name"></label>
+        <label>E-mail<input type="email" required id="email" placeholder="delivery@gmail.com"></label>
+        <label>Phone<input type="text" required id="phone" placeholder="+38 (0_ _) _ _ _-_ _-_ _"></label>
+    </fieldset>
+    <fieldset id="products">
+        <legend><b>Choose to order</b></legend>
+        <span id="note">Note: delivery is FREE</span>
+        <ul>
+            <li><label>oil 15$</label>
+                <input type="number" id="oil" min="0" max="100" placeholder="0"></li>
+            <li><label>bread 2$</label>
+                <input type="number" id="bread" min="0" max="100" placeholder="0"></li>
+            <li><label>juice 5$</label>
+                <input type="number" id="juice" min="0" max="100" placeholder="0"></li>
+            <li><label>beer 5$</label>
+                <input type="number" id="beer" min="0" max="100" placeholder="0"></li>
+            <li><label>fish 20$</label>
+                <input type="number" id="fish" min="0" max="100" placeholder="0"></li>
+            <li><label>tomato 3$</label>
+                <input type="number" id="tomato" min="0" max="100" placeholder="0"></li>
+            <li><label>potato 7$</label>
+                <input type="number" id="potato" min="0" max="100" placeholder="0"></li>
+        </ul>
+        <button onclick="count();" id="total"><b>Count</b></button>
+        <span id="area"><b>Total: ... </b></span>
+    </fieldset>
+    <fieldset id="address">
+        <legend><b>Address to deliver</b></legend>
+        <label>City<input type="text" required id="city"></label>
+        <label>Street<input type="text" required id="street"></label>
+        <label>House<input type="text" required id="house"></label>
+    </fieldset>
+    <fieldset id="when">
+        <legend><b>Date and Time of delivery</b></legend>
+        <label for="date">Pick a date</label>
+            <input id="date" type="date" name="delivery_date" required>
+        <label for="time">Set time</label>
+            <input id="time" type="time" name="delivery_time" required>
+    </fieldset>
+    <button type="submit" class="submit">SUBMIT</button>
+    <script src="form.js"></script>
+</body>
+</html>

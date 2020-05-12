@@ -1,0 +1,180 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg, #a8a8a8 0%, #cbcece 50%, #e0dede 70%, #cecbcb 100%);
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btn, .submit {
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    padding: 4px 18px;
+    margin: 3px 8px;
+    border-radius: 28px;
+    background-image: linear-gradient(45deg, #828688 0%, #cbcece 50%, #a5a5a5 70%, #979494 100%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    box-shadow: 0 16px 32px 0 rgba(118, 119, 119, 0.35);
+    border: 1px inset black;
+    transition: .5s;
+}
+.btn:hover {
+    box-shadow: 0 0 0 0 rgba(0,40,120,0);
+    background-position: 0 0;
+    border: 2px solid black;
+    left: 35px;
+}
+.btn {
+    position: absolute;
+    top: 30px;
+    left: 35px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+#thank {
+    position: relative;
+    font-size: 3em;
+    top: 70px;
+    left: 400px;
+    color: transparent;
+    animation: a 5s step-start 3s infinite;
+}
+@keyframes a {
+    0% {
+        color: transparent;
+    }
+    100% {
+        z-index: 1000;
+        color: black;
+    }
+}
+#you {
+    position: relative;
+    font-size: 3em;
+    top: 70px;
+    left: 400px;
+    color: transparent;
+    animation: a 4s step-start 3.5s infinite;
+}
+#for {
+    position: relative;
+    font-size: 3em;
+    top: 70px;
+    left: 400px;
+    color: transparent;
+    animation: a 3s step-start 4s infinite;
+}
+#your {
+    position: relative;
+    font-size: 3em;
+    top: 70px;
+    left: 400px;
+    color: transparent;
+    animation: a 2s step-start 4.5s infinite; 
+}
+#order {
+    position: relative;
+    font-size: 3em;
+    top: 70px;
+    left: 400px;
+    color: transparent;
+    animation: a 1s step-start 5s infinite; 
+}
+#contacts {
+    position: relative;
+    top: 150px;
+    left: 30px;
+    width: 200px;
+    height: 270px;
+    line-height: 1.5em;
+}
+#email, #name, #phone {
+    width: 250px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+#products {
+    position: relative;
+    top: -140px;
+    left: 410px;
+    width: 200px;
+    height: 270px;
+    line-height: 1.5em;
+}
+#address {
+    position: relative;
+    top: -430px;
+    left: 695px;
+    width: 200px;
+    height: 270px;
+    line-height: 1.5em;
+}
+#when {
+    position: relative;
+    top: -720px;
+    left: 985px;
+    width: 180px;
+    height: 270px;
+    line-height: 1.5em;
+}
+#date, #time {
+    width: 250px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.submit {
+    position: absolute;
+    top: 580px;
+    left: 605px;
+}
+.submit:hover {
+    box-shadow: 0 0 0 0 rgba(0,40,120,0);
+    background-position: 0 0;
+    border: 2px solid black;
+    left: 605px;
+}
+#oil {
+    margin-left: 45px;
+    width: 40px;
+}
+#bread {
+    margin-left: 30px;
+    width: 40px;
+}
+#juice, #fish {
+    margin-left: 38px;
+    width: 40px;
+}
+#beer {
+    margin-left: 39px;
+    width: 40px;
+}
+#tomato {
+    margin-left: 23px;
+    width: 40px;
+}
+#potato {
+    margin-left: 28px;
+    width: 40px;
+}
+#total {
+    position: absolute;
+    left: 145px;
+}
+#area {
+    position: relative;
+    left: 23px;
+    top: 1px;
+}
+#note {
+    position: relative;
+    left: 25px;
+    text-decoration-line: underline;
+}

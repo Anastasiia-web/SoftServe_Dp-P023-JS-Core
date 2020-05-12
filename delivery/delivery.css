@@ -1,0 +1,251 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg, #a8a8a8 0%, #cbcece 50%, #e0dede 70%, #cecbcb 100%);
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 360px;
+    background: #d6eaf8;
+}
+.screen {
+    width: 300px;
+    height: 360px;
+    background-image: url(1.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.cover {
+    position: absolute;
+    top: 280px;
+    left: 720px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    z-index: 10;
+}
+.oil {
+    position: relative;
+    top: 90px;
+    left: 190px;
+    width: 50px;
+    height: 50px;
+    background-image: url(oil.png);
+    background-size: 20% 80%;
+    background-repeat: no-repeat;
+    animation: oil 4s ease 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes oil {
+    0% {
+        top: 90px;
+        left: 190px;
+        z-index:11;
+    }
+    100% {
+        width: 150px;
+        height: 150px;
+        top: 10px;
+        left: 490px;
+        transform: rotate(1110deg);
+        z-index: 1;
+    }
+}
+.bread {
+    position: relative;
+    top: 55px;
+    left: 190px;
+    width: 20px;
+    height: 20px;
+    background-image: url(bread.png);
+    background-size: 80% 60%;
+    background-repeat: no-repeat;
+    animation: bread 4s ease 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes bread {
+    0% {
+        top: 55px;
+        left: 190px;
+        z-index: 11;
+    }
+    100% {
+        width: 150px;
+        height: 150px;
+        top: 110px;
+        left: 590px;
+        transform: rotate(1110deg);
+        z-index: 1;
+    }
+}
+.potato {
+    position: absolute;
+    top: 300px;
+    left: 720px;
+    width: 50px;
+    height: 50px;
+    background-image: url(potato.png);
+    background-size: 80% 60%;
+    background-repeat: no-repeat;
+    animation: potato 4s ease 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes potato {
+    0% {
+        top: 300px;
+        left: 720px;
+        z-index: 11;
+    }
+    100% {
+        width: 150px;
+        height: 150px;
+        top: 30px;
+        left: 10px;
+        transform: rotate(1110deg);
+        z-index: 1;
+    }
+}
+.juice {
+    position: absolute;
+    top: 280px;
+    left: 720px;
+    width: 50px;
+    height: 50px;
+    background-image: url(juice.png);
+    background-size: 40% 100%;
+    background-repeat: no-repeat;
+    animation: juice 5s ease 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes juice {
+    0% {
+        top: 280px;
+        left: 720px;
+        z-index: 11;
+    }
+    100% {
+        width: 180px;
+        height: 200px;
+        top: 230px;
+        left: 10px;
+        transform: rotate(1110deg);
+        z-index: 1;
+    }
+}
+.tomato {
+    position: absolute;
+    top: 280px;
+    left: 720px;
+    width: 50px;
+    height: 50px;
+    background-image: url(tomato.png);
+    background-size: 40% 50%;
+    background-repeat: no-repeat;
+    animation: tomato 6s ease 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes tomato {
+    0% {
+        top: 280px;
+        left: 720px;
+        z-index: 11;
+    }
+    100% {
+        width: 150px;
+        height: 150px;
+        top: 530px;
+        left: 790px;
+        transform: rotate(710deg);
+        z-index: 1;
+    }
+}
+.fish {
+    position: absolute;
+    top: 280px;
+    left: 720px;
+    width: 50px;
+    height: 50px;
+    background-image: url(fish.png);
+    background-size: 100% 70%;
+    background-repeat: no-repeat;
+    animation: fish 10s ease 6s;
+    animation-iteration-count: infinite;
+}
+@keyframes fish {
+    0% {
+        top: 280px;
+        left: 720px;
+        z-index: 11;
+    }
+    100% {
+        width: 150px;
+        height: 150px;
+        top: 530px;
+        left: 110px;
+        transform: rotate(710deg);
+        z-index: 1;
+    }
+}
+.beer {
+    position: absolute;
+    top: 280px;
+    left: 720px;
+    width: 50px;
+    height: 50px;
+    background-image: url(beer.png);
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    animation: beer 15s ease 7s;
+    animation-iteration-count: infinite;
+}
+@keyframes beer {
+    0% {
+        top: 280px;
+        left: 720px;
+        z-index:11;
+    }
+    100% {
+        width: 150px;
+        height: 150px;
+        top: 530px;
+        left: 10px;
+        transform: rotate(710deg);
+        z-index: 1;
+    }
+}
+.btn {
+    position: relative;
+    top: 230px;
+    left: 135px;
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    padding: 4px 18px;
+    margin: 3px 8px;
+    border-radius: 28px;
+    background-image: linear-gradient(45deg, #828688 0%, #cbcece 50%, #a5a5a5 70%, #777676 100%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    box-shadow: 0 16px 32px 0 rgba(118, 119, 119, 0.35);
+    border: 1px inset black;
+    transition: .5s;
+    text-shadow:0px 1px 0 rgb(247, 244, 244),0px -1px 0 rgb(241, 227, 227),1px 0px 0 rgb(177, 176, 176),-1px 0px 0 rgb(204, 200, 200),1px 1px 0 rgb(212, 209, 209),1px -1px 0 rgb(151, 150, 150),-1px 1px 0 rgb(241, 237, 237);
+}
+.btn:hover {
+    box-shadow: 0 0 0 0 rgba(0,40,120,0);
+    background-position: 0 0;
+    border: 2px solid black;
+    left: 134px;
+}
