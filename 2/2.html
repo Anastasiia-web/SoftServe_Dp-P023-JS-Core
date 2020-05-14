@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="2.css">
+</head>
+<body>
+    <span id="welcome"> <b> Let's find some gold! </b></span>
+    <button onclick="start();" id="start_button"><b>START</b></button>
+    <div id="cover">
+    <fieldset id="form">
+        <legend><b>ENTER 6 NUMBERS: max 100 </b></legend>
+        <ul>
+            <span> <u> Price </u> </span>
+            <li><label>A1</label>
+                <input type="number" id="a1" min="0" max="100" placeholder="0"></li>
+            <li><label>A2</label>
+                <input type="number" id="a2" min="0" max="100" placeholder="0"></li>
+            <li><label>A3</label>
+                <input type="number" id="a3" min="0" max="100" placeholder="0"></li>
+            <span> <u> Capacity </u> </span>
+            <li><label>B1</label>
+                <input type="number" id="b1" min="0" max="100" placeholder="0"></li>
+            <li><label>B2</label>
+                <input type="number" id="b2" min="0" max="100" placeholder="0"></li>
+            <li><label>B3</label>
+                <input type="number" id="b3" min="0" max="100" placeholder="0"></li>
+        </ul>
+        <button onclick="count();" id="total"><b>Count</b></button>
+        <span id="area"><b>Total: ... </b></span>
+    </fieldset>
+</div>
+    <script src="2.js"></script>
+</body>
+</html>
