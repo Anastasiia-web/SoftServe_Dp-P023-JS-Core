@@ -1,12 +1,26 @@
 function start() {
     return 'rgb(255,215,0)';
 }
+
 start_button.onclick = function() {
     cover.style.background = start();
 }
 
 function attention() {
     return 'rgb(255,0,0)';
+}
+
+function no_attention() {
+    return 'rgb(255,255,255)';
+}
+
+more.onclick = function() {
+    a1.style.background = no_attention();
+    a2.style.background = no_attention();
+    a3.style.background = no_attention();
+    b1.style.background = no_attention();
+    b2.style.background = no_attention();
+    b3.style.background = no_attention();
 }
 
 function black() {
@@ -39,31 +53,31 @@ function count() {
     document.getElementById('area').innerHTML = `Total: ${the_biggest_amount} $.`;
     area.style.color = black();
 
-    if(Math.max(sum1_1, sum1_2, sum1_3, sum2_1, sum2_2, sum2_3, sum3_1, sum3_2, sum3_3) == sum1_1){
+    if(the_biggest_amount == sum1_1){
         a1.style.background = attention();
         b1.style.background = attention();
-    } else if(Math.max(sum1_1, sum1_2, sum1_3, sum2_1, sum2_2, sum2_3, sum3_1, sum3_2, sum3_3) == sum1_2) {
+    } else if(the_biggest_amount == sum1_2) {
         a1.style.background = attention();
         b2.style.background = attention();
-    } else if(Math.max(sum1_1, sum1_2, sum1_3, sum2_1, sum2_2, sum2_3, sum3_1, sum3_2, sum3_3) == sum1_3) {
+    } else if(the_biggest_amount == sum1_3) {
         a1.style.background = attention();
         b3.style.background = attention();
-    } else if(Math.max(sum1_1, sum1_2, sum1_3, sum2_1, sum2_2, sum2_3, sum3_1, sum3_2, sum3_3) == sum2_1) {
+    } else if(the_biggest_amount == sum2_1) {
         a2.style.background = attention();
         b1.style.background = attention();
-    } else if(Math.max(sum1_1, sum1_2, sum1_3, sum2_1, sum2_2, sum2_3, sum3_1, sum3_2, sum3_3) == sum2_2) {
+    } else if(the_biggest_amount == sum2_2) {
         a2.style.background = attention();
         b2.style.background = attention();
-    } else if(Math.max(sum1_1, sum1_2, sum1_3, sum2_1, sum2_2, sum2_3, sum3_1, sum3_2, sum3_3) == sum2_3) {
+    } else if(the_biggest_amount == sum2_3) {
         a2.style.background = attention();
         b3.style.background = attention();
-    } else if(Math.max(sum1_1, sum1_2, sum1_3, sum2_1, sum2_2, sum2_3, sum3_1, sum3_2, sum3_3) == sum3_1) {
+    } else if(the_biggest_amount == sum3_1) {
         a3.style.background = attention();
         b1.style.background = attention();
-    } else if(Math.max(sum1_1, sum1_2, sum1_3, sum2_1, sum2_2, sum2_3, sum3_1, sum3_2, sum3_3) == sum3_2) {
+    } else if(the_biggest_amount == sum3_2) {
         a3.style.background = attention();
         b2.style.background = attention();
-    } else if(Math.max(sum1_1, sum1_2, sum1_3, sum2_1, sum2_2, sum2_3, sum3_1, sum3_2, sum3_3) == sum3_3) {
+    } else if(the_biggest_amount == sum3_3) {
         a3.style.background = attention();
         b3.style.background = attention();
     }

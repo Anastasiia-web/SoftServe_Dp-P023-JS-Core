@@ -34,7 +34,7 @@ body {
     top: 40px;
     left: 450px;
     color: transparent;
-    animation: a 1s step-start 1s infinite;
+    animation: a 2s step-start 1s infinite;
 }
 @keyframes a {
     0% {
