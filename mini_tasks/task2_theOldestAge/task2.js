@@ -8,11 +8,12 @@ let do_less = split_number.pop(); // удаляем в конце массива
 let second_oldest_age = Math.max.apply(null, split_number);
 alert(`Two oldest ages ${second_oldest_age}, ${oldest_age}`);
 
+/*
+let given_phrase = "is2 Thi1s T4est 3a";
+console.log(given_phrase);
 
-
-
-
-
+let arr = given_phrase.split(' ');
+*/
 
 //РАБОТА С МАССИВАМИ
 
