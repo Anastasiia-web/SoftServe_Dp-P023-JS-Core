@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	align-items: center;
+	height: 100vh;
+	overflow: hidden;
+	background: linear-gradient(to bottom right, white, grey);
+}
+#btn{
+    position: absolute;
+    top: 35px;
+    left: 80px;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+    color: black;
+    box-shadow: 0.5em 0.5em 0.5em lightgrey;
+    background-color: rgb(170, 170, 170);
+    text-decoration: none;
+    padding-left: 35px;
+    padding-top: 15px;
+}
+#form {
+    position: absolute;
+    top: 35px;   
+    line-height: 2em;
+}
+#circle {
+    position: absolute;
+    top: 400px;  
+    width: 90px;
+    height: 90px;
+    background-color: crimson;
+    border-radius: 50%;
+}
+#change_size_btn {
+    margin-left: 40px;
+}
+#width_input {
+    margin-left: 10px;
+}
+#height_input {
+    margin-left: 8px;
+}
+#color_input_1 {
+    margin-left: 15px;
+}
