@@ -13,8 +13,8 @@ body {
     position: absolute;
     top: 35px;
     left: 80px;
-    width: 80px;
-    height: 30px;
+    width: 50px;
+    height: 25px;
     cursor: pointer;
     color: black;
     box-shadow: 0.5em 0.5em 0.5em lightgrey;

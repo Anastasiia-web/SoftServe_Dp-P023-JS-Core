@@ -101,7 +101,11 @@ body {
 .task2 {
 	margin-left: 300px;
 }
+.task_five {
+	position: absolute;
+}
 .task_five_new {
+	position: absolute;
 	margin-top: -150px;
 }
 #btn_back {
