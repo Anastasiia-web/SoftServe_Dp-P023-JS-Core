@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0px;
+}
+#btn{
+    position: absolute;
+    top: 35px;
+    left: 80px;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+    color: black;
+    box-shadow: 0.5em 0.5em 0.5em lightgrey;
+    background-color: rgb(170, 170, 170);
+    text-decoration: none;
+    padding-left: 35px;
+    padding-top: 15px;
+}
+#first_square, #second_square, #third_square, #fourth_square, #fifth_square {
+    width: 120px;
+    height: 120px;
+    outline: none;
+    border: 5px dotted red;
+    font-size: 16px;
+    line-height: 25px;
+}
+#first_square:hover, #second_square:hover, #third_square:hover, #fourth_square:hover, #fifth_square:hover {
+    cursor: pointer;
+    width: 130px;
+    height: 130px;
+}
+#first_square {
+    background-color: chartreuse;
+}
+#second_square {
+    background-color: royalblue;
+}
+#third_square {
+    background-color: salmon;
+}
+#fourth_square {
+    background-color: red;
+}
+#fourth_square {
+    background-color: sienna;
+}
+#fifth_square {
+    background-color: yellow;
+}
