@@ -112,14 +112,14 @@ body {
 	position: absolute;
     top: 45px;
     left: 95px;
-    width: 90px;
-    height: 40px;
+	width: 55px;
+    height: 25px;
     cursor: pointer;
     color: black;
     box-shadow: 0.5em 0.5em 0.5em lightgrey;
     background-color: rgb(170, 170, 170);
     text-decoration: none;
-    padding-left: 25px;
+    padding-left: 12px;
 	padding-top: 8px;
 	font-size: 16px;
 	border: 2px ridge grey;

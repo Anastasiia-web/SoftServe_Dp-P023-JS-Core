@@ -13,15 +13,15 @@ body {
     position: absolute;
     top: 35px;
     left: 80px;
-    width: 50px;
+    width: 55px;
     height: 25px;
     cursor: pointer;
     color: black;
     box-shadow: 0.5em 0.5em 0.5em lightgrey;
     background-color: rgb(170, 170, 170);
     text-decoration: none;
-    padding-left: 35px;
-    padding-top: 15px;
+    padding-left: 12px;
+    padding-top: 8px;
 }
 #first_square, #second_square, #third_square, #fourth_square, #fifth_square {
     width: 120px;
