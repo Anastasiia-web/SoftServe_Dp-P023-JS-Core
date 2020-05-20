@@ -1,0 +1,154 @@
+.inp {
+    margin-left: 400px;
+}
+#square {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    width: 100px;
+    height: 100px; 
+    display: none;
+    animation: a 1s ease forwards;
+}
+
+@keyframes a {
+    0% {
+        width: 100px;
+        height: 100px;
+    }
+    100% {
+        width: 0;
+        height: 0;
+    }
+}
+#circle {
+    position: absolute;
+    top: 100px;
+    left: 255px;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+#rhombus {
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    width: 120px; 
+    height: 90px;
+    transform: skew(20deg);
+    display: none;
+}
+#oval {
+    position: absolute;
+    top: 100px;
+    left: 550px;
+    width: 200px;
+    height: 100px;
+    -webkit-border-radius: 100px / 50px;
+    -moz-border-radius: 100px / 50px;
+    border-radius: 100px / 50px;
+    display: none;
+}
+#triangle {
+    position: absolute;
+    top: 70px;
+    left: 750px;
+    width: 0;
+    height: 0;
+    border-bottom: 140px solid white;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    display: none;
+}
+#rectangle {
+    position: absolute;
+    top: 90px;
+    left: 900px;
+    width: 220px;
+    height: 120px;  
+    display: none;
+}
+#pacman {
+    position: absolute;
+    top: 300px;
+    left: 350px;
+    width: 0;
+    height: 0;
+    border-right: 70px solid transparent;
+    border-top: 70px solid white;
+    border-left: 70px solid white;
+    border-bottom: 70px solid white;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+}
+#trapezium {
+    position: absolute;
+    top: 320px;
+    left: 550px;
+    height: 0;
+    width: 120px;
+    border-bottom: 120px solid white;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+}
+#triangle_down {
+    position: absolute;
+    top: 520px;
+    left: 635px;
+    width: 0;
+    height: 0;
+    border-top: 100px solid white;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+}
+#square2 {
+    position: absolute;
+    top: 320px;
+    left: 850px;
+    width: 120px;
+    height: 120px;
+    display: none;
+}
+.zero {
+    background-color: rgb(247, 111, 111);
+    color: chartreuse;
+}
+.one {
+    background-color: rgb(111, 136, 247);
+    color: rgb(255, 30, 0);
+}
+.two{
+    background-color: rgb(253, 18, 253);
+    color: rgb(18, 20, 17);
+}
+.three {
+    background-color: rgb(111, 247, 229);
+    color: rgb(245, 125, 13);
+}
+.four {
+    background-color: rgb(56, 45, 45);
+    color: rgb(4, 0, 255);
+}
+.five {
+    background-color: rgb(247, 238, 111);
+    color: rgb(247, 111, 111);
+}
+.six {
+    background-color: rgb(247, 111, 111);
+    color:  rgb(53, 48, 53);
+}
+.seven {
+    background-color: rgb(4, 0, 255);
+    color: rgb(127, 255, 0);
+}
+.eight {
+    background-color: rgb(18, 20, 17);
+    color: rgb(255, 255, 255);
+}
+.nine {
+    background-color:  rgb(172, 245, 99);
+    color: rgb(9, 25, 252);
+}

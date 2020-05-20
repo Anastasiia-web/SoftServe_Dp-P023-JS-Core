@@ -108,12 +108,22 @@ body {
 	position: absolute;
 	margin-top: -150px;
 }
+.task3 {
+	position: absolute;
+	margin-top: 150px;
+	margin-left: -150px;
+}
+.task_five_newone {
+	position: absolute;
+	margin-top: 150px;
+	margin-left: 150px;
+}
 #btn_back {
 	position: absolute;
     top: 45px;
     left: 95px;
-	width: 55px;
-    height: 25px;
+	width: 60px;
+    height: 40px;
     cursor: pointer;
     color: black;
     box-shadow: 0.5em 0.5em 0.5em lightgrey;
