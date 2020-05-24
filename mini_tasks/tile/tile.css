@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 600px;
+    height: 600px;
+}
+.square {
+    width: 60px;
+    height: 60px;
+    display: none;
+}
+#final {
+    position: absolute;
+    font-size: 9em;
+    left: 10px;
+    top: 10px;
+    text-align: center;
+    display: none;
+}

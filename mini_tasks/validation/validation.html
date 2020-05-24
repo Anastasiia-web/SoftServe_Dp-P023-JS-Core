@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="validation.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <form action="#" class="form_without_js">
+        <div class="input_fieild_name_without_js">
+            <p> <b> Validation without JS </b> </p>
+            <label for="name_1">Enter your name (name can't contain digits)</label>
+            <input type="text" id="name_without_js" placeholder="Brendan Eich" pattern="[^0-9]*" required>
+            <input type="submit" id="sub_without_js" value="Submit">
+        </div>
+    </form>
+    <form class="form" action="javascript:void(0)">
+        <div class="input_fieild_name">
+            <p> <b> JS Validation </b> </p>
+            <label for="text">Enter your name (name can't contain digits)</label>
+            <input type="text" class="text" placeholder="Brendan Eich">
+            <button type="submit" class="btn-submit"> Submit </button>
+            <p class="error"></p>
+        </div>
+    </form>
+    <script src="validation.js"></script>
+</body>
+</html>

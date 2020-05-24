@@ -1,0 +1,54 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main {
+    display: grid;
+    grid-template: 30% 70% / 10% 35% 55%;
+    width: 350px;
+    height: 300px;
+}
+.identification, .in, .out, .index_number, .set_number, .user_input {
+    padding-top: 20px;
+    padding-left: 12px;
+    border: 1px solid green;
+}
+.identification {
+    grid-area: 1 / 1;
+    border-bottom: 1px solid transparent;
+}
+.in {
+    grid-area: 1 / 2;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+.out {
+    grid-area: 1 / 3;;
+    border-bottom: 1px solid transparent;
+}
+.index_number {
+    grid-area: 2 / 1;
+}
+.set_number {
+    grid-area: 2 / 2;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+.user_input {
+    grid-area: 2 / 3;
+}
+.user_enter_input {
+    border: 1px solid transparent;
+    outline: none;
+}
+.assessment {
+    position: relative;
+    top: 50px;
+}

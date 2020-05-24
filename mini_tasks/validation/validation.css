@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input_fieild_name_without_js, .input_fieild_name {
+    margin-top: 150px;
+    width: 350px;
+    height: 50px;
+    line-height: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#sub_without_js, .btn-submit {
+    margin-left: 45px;
+}
+#name_without_js, .text {
+    height: 20px; 
+    font-size: 16px;
+    outline: none;
+    border: 2px solid black;
+}
+#name_without_js:invalid:not(:placeholder-shown) {
+    border-color: #ff0000;
+}
+#name_without_js:valid:not(:placeholder-shown) {
+    border-color: green;
+}
+p {
+    font-family: cursive;
+}
+.trial {
+    margin-top: 140px;
+}
+.error {
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+}
