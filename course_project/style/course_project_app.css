@@ -1,3 +1,11 @@
+.logo {
+    margin-left: -105px;
+    margin-top: -50px;
+    width: 450px;
+    height: 150px;
+    background-image: url(todo.jpg);
+    background-size: 95% 150%;
+}
 .todos-list {
     width: 200px;
     border: 1px solid grey;
@@ -8,7 +16,7 @@
     list-style-type: none;
 }
 .todos-list li {
-    margin-top: 15px;
+    margin-top: 20px;
 }
 .todos-list li.done {
     text-decoration: line-through;
