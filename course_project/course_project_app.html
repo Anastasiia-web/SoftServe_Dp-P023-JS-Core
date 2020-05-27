@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="style/course_project_app.css">
 </head>
 <body>
-    <div class="logo"></div>
-    <ul class="todos-list" ></ul>
-    <label for="al_is_done" id="txt_done"> Everything is done :)</label>
-    <input type="checkbox" id="all_is_done" onclick="cross_all()">
-    <label for="new_task" id="txt_new_task"> New task</label>
-    <input type="text" id="new_task">
-    <button id="add" onclick="add_new_task()">Add</button>
+    <ul class="todos-list"></ul>
+    <label for="al_is_done" id="txt_done" onclick="ontxt_doneClick()"> <b> Everything is done :) </b> </label>
+    <input type="checkbox" id="all_is_done">
+    <label for="new_task" id="txt_new_task"> <b> New task </b> </label>
+    <input type="text" id="new_task" onchange="generateListItem()">
+    <button id="add" onclick="add_new_task()"> <b> Add </b> </button>
     <script src="course_project_app.js"></script>
 </body>
 </html>

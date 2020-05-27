@@ -45,27 +45,74 @@ document.querySelector('.todos-list').addEventListener('click', onTodoClick);
 
 render(todos);
 
-function cross_all() {
+
+
+function cross_all(ev) {                                                      //не смогла добавить класс с line-through ??? 
+    console.log('click to all_is_done', ev.target); 
+    console.dir(ev.target);
     let checkBox = document.getElementById("all_is_done");
-    const todos = document.querySelector(".todos-list");
   
     if (checkBox.checked == true){
-        todos.style.textDecoration = "line-through";
+        document.getElementsByClassName('todos-list li').classList.add('done');
     } else {
-        todos.style.textDecoration = "none";
+        null;
     }
 }
+
+document.querySelector('#all_is_done').addEventListener('click', cross_all);
+
 
 function add_new_task() {
     let a = document.querySelector('#new_task');
     let f = a.value;
-    console.log(f);
-    todos.push(f);
+    todos.push(generateListItem(f));
     console.log(todos);
+    render(todos);
+    if(a.length >= 0){                //функция очистки поля ввода ??? не работает
+        return f = "";
+      }
 }
 
-    
 
+// c консультации
+function generateListItem(text = 'default text') {
+    return {
+        text,                                                // если совпадает, можно не повторять text
+        isDone : false,
+        id : (new Date()).valueOf().toString(16)             //генерация уникального айди в 16ричном виде через функцию времени
+    }
+}
+console.log(generateListItem());
+
+// paзбераться через ивенты!!!
+
+function ontxt_doneClick(){   
+    let g = document.querySelector('#txt_done');
+    g.style.color = 'rgb(255,0,0)';
+    g.style.fontFamily = 'cursive';
+    let timerId = setInterval(function(){ g.innerHTML = 'Congrats on your achievements!' }, 10); //?убрать показ через 2 сек с переменной setTimeout \ clearInterval
+    setTimeout(() => { clearInterval(timerId); g.innerHTML = 'Everything is done :)'; g.style.color = 'rgb(0,0,0)'; }, 1500);
+}
+
+
+/*
+
+// до консультации работает
+function add_new_task() {
+    let a = document.querySelector('#new_task');
+    let f = a.value;
+    console.log(f);
+    
+}
+*/
+    
+/* мое реагирует
+function add_new_task() {
+    let a = document.querySelector('#new_task');
+    let f = a.value;
+    console.log(f);
+}
+*/
 
 
 

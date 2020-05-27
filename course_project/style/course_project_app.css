@@ -1,16 +1,16 @@
-.logo {
-    margin-left: -105px;
-    margin-top: -50px;
-    width: 450px;
-    height: 150px;
-    background-image: url(todo.jpg);
-    background-size: 95% 150%;
+body {
+    background-image: url(js-todo.png);
+    background-repeat: no-repeat;
+    background-size: 130% 290%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .todos-list {
+    position: relative;
+    top: 100px;
+    left: 30px;
     width: 200px;
     border: 1px solid grey;
     padding: 15px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 .todos-list li{
     list-style-type: none;
@@ -21,9 +21,35 @@
 .todos-list li.done {
     text-decoration: line-through;
 }
-#txt_done {
-    margin-left: 30px;
+#txt_done, #all_is_done {
+    position: relative;
+    left: 300px;
+    top: -170px;
 }
 #txt_new_task {
-    margin-left: 60px;
+    position: relative;
+    left: 107px;
+    top: -120px;
+}
+#all_is_done {
+    position: relative;
+    left: 320px;
+    top: -165px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+#new_task {
+    position: relative;
+    left: 34px;
+    height: 85px;
+    top: -50px;
+}
+#add {
+    position: relative;
+    left: -142px;
+    top: 28px;
+}
+#txt_done {
+    cursor: pointer;
 }
