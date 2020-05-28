@@ -30,14 +30,28 @@ function count(value) {
     if(g == optionS || g == optionM || g == optionMul || g == optionD) {
         result.innerHTML = 'Well done!';
     } else {
-        result.innerHTML = 'Try more!';
+        result.innerHTML = 'Try again!';
     }  
 }
+submit.onclick = count;
 
 
 
 
+/* 1 вариант
+function new_task(value) {  
+    a.innertext = '';
+}
 
+more.onclick = new_task;
+*/
+/*
+
+let more_but = document.querySelector('#more');
+
+more_but.addEventListener("click", start);
+
+*/
 
 
 
