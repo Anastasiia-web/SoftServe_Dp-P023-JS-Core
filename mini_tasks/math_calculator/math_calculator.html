@@ -7,17 +7,14 @@
     <link rel="stylesheet" href="math_calculator.css">
 </head>
 <body>
-    <main>
-        <div class="identification">#</div>
-        <div class="in">IN</div>
-        <div class="out">OUT</div>
-        <div class="index_number"></div>
-        <div class="set_number"></div>
-        <div class="user_input">
-            <input type="text" class="user_enter_input" placeholder="3 * 4 =" onchange="a_value(this);"/>
-            <span class="assessment"></span>
-        </div>
-    </main>
+    <div id="timer"></div> 
+    <p><b> Count and enter your answer </b></p>
+    <p>new task is given every 5 sec. To change the task press "task" button</p>
+    <button id="more">task</button>
+    <p id="given"></p>
+    <input type="text" id="w">
+    <p id="result"></p>
+    <button id="submit">Check</button>
     <script src="math_calculator.js"></script>
 </body>
 </html>
