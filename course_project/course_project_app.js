@@ -11,7 +11,7 @@ const todos = [
     },
     {
         text : 'Buy a pet', 
-        isDone : false,
+        isDone : true,
         id : 2
     },
     {
@@ -46,35 +46,23 @@ document.querySelector('.todos-list').addEventListener('click', onTodoClick);
 render(todos);
 
 
+document.querySelector('#all_is_done').addEventListener('click', onCheckAllChange);
 
-function cross_all(ev) {                                                      //не смогла добавить класс с line-through ??? 
-    console.log('click to all_is_done', ev.target); 
-    console.dir(ev.target);
-    let checkBox = document.getElementById("all_is_done");
-  
-    if (checkBox.checked == true){
-        document.getElementsByClassName('todos-list li').classList.add('done');
-    } else {
-        null;
-    }
+
+function onCheckAllChange(){
+    todos.forEach(todo => todo.isDone = this.checked);
+    render(todos);
 }
-
-document.querySelector('#all_is_done').addEventListener('click', cross_all);
 
 
 function add_new_task() {
     let a = document.querySelector('#new_task');
-    let f = a.value;
-    todos.push(generateListItem(f));
-    console.log(todos);
+    todos.push(generateListItem(a.value));
+    a.value = '';
     render(todos);
-    if(a.length >= 0){                //функция очистки поля ввода ??? не работает
-        return f = "";
-      }
 }
 
 
-// c консультации
 function generateListItem(text = 'default text') {
     return {
         text,                                                // если совпадает, можно не повторять text
@@ -82,21 +70,114 @@ function generateListItem(text = 'default text') {
         id : (new Date()).valueOf().toString(16)             //генерация уникального айди в 16ричном виде через функцию времени
     }
 }
-console.log(generateListItem());
 
-// paзбераться через ивенты!!!
 
-function ontxt_doneClick(){   
+// готово: работает удаление, но на всё поле
+const list = document.querySelector('.todos-list');
+
+list.oncontextmenu = function(event) {
+    event.preventDefault();
+    list.innerHTML = '';
+    todos.length = 0;
+  };
+
+// готова статистика, но не учитываются изменения
+
+function statDone() {
+
+    const statisticsIsDone = todos.filter(item => item.isDone == true);
+    const y = document.querySelector('#statistics-done');
+
+    y.innerHTML = `Done: ${statisticsIsDone.length}`;
+    render(todos);
+    }
+
+statDone();
+
+
+let statisticsIsNotDone = todos.filter(item => item.isDone == false);
+let z = document.querySelector('#statistics-not-done');
+z.innerHTML = `Not done: ${statisticsIsNotDone.length}`;
+
+
+
+
+
+
+/*
+//работает, сохраняя предыдущий выбор
+function cross_all(ev) {                                                      //не смогла добавить класс с line-through ??? 
+    console.log('click to all_is_done', ev.target); 
+    console.dir(ev.target);
+    let checkBox = document.getElementById("all_is_done");
+    const list = document.querySelector('.todos-list');
+  
+    if (checkBox.checked == true){
+        list.style.textDecoration = 'line-through';
+    } else {
+        list.style.textDecoration = 'none';
+    }
+}
+*/
+
+/* // строка-поздравление с достижением 
+all_is_done.onclick = function everything_done(){   
     let g = document.querySelector('#txt_done');
     g.style.color = 'rgb(255,0,0)';
     g.style.fontFamily = 'cursive';
     let timerId = setInterval(function(){ g.innerHTML = 'Congrats on your achievements!' }, 10); //?убрать показ через 2 сек с переменной setTimeout \ clearInterval
     setTimeout(() => { clearInterval(timerId); g.innerHTML = 'Everything is done :)'; g.style.color = 'rgb(0,0,0)'; }, 1500);
 }
+*/
+
+
+ // странно, работает удаление после клика при клике на поле !!! https://learn.javascript.ru/introduction-browser-events
+ /*
+document.querySelector('#delete_todo').addEventListener('click', deleteTodo);
+
+function deleteTodo(ev) {
+    todos.length = 0;                                  //удаление массива
+    console.log(todos);
+}
+*/
 
 
 /*
+let users = [
+    {id: 1, name: "Вася"},
+    {id: 2, name: "Петя"},
+    {id: 3, name: "Маша"}
+  ];
+  console.log(users);
+  // возвращает массив, состоящий из двух первых пользователей
+  let someUsers = users.filter(item => item.name == "Вася" || item.name == "Маша");
+  console.log(someUsers);            // показать объекты с такими данными
+  console.log(someUsers.length);         // показать кол-во объектов с такими данными
+  
+ // console.log(someUsers.length); // 2        ДЛЯ СТАТИСТИКИ!!!
+*/
+/*
+    function compareNumeric(a, b) {
+        if (a > b) return 1;
+        if (a == b) return 0;
+        if (a < b) return -1;
+      }
+      
+      let arr = [ 1, 2, 15 ];
+      
+      arr.sort(compareNumeric);
+*/
 
+  
+
+
+
+/*
+contextmenu
+selectNodeContents(node) выделить всё содержимое node
+deleteContents() – удалить содержимое диапазона из документа
+*/
+/*
 // до консультации работает
 function add_new_task() {
     let a = document.querySelector('#new_task');
@@ -115,22 +196,6 @@ function add_new_task() {
 */
 
 
-
-
-
-
-  /* мое недоделанное с событием
-function mark_all(ev) {
-    //console.log('all_is_done', ev.target);
-    const marked = ev.target.all_is_done;
-    for(let i = 0; i < todos.length; i++) {
-        if(marked == checked) {
-            todos[i].isDone = true;
-            break;
-        }
-    }
-}
-*/
 /* Одно и тоже с эрроу фанкшн !!!
 function onTodoClick(ev){
     console.log('click to todo', ev.target);   

@@ -1,55 +1,86 @@
 body {
+    width: 100vw;
+    height: 100vh;
     background-image: url(js-todo.png);
     background-repeat: no-repeat;
-    background-size: 130% 290%;
+    background-size: 130% 150%;
     font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
 }
 .todos-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     position: relative;
-    top: 100px;
+    top: 110px;
     left: 30px;
-    width: 200px;
-    border: 1px solid grey;
-    padding: 15px;
+    width: 210px;
+    border: 2px dashed black;
+    padding-left: 15px;
+    padding-top: 5px;
+    cursor: pointer;
+    min-height: 70px;
 }
 .todos-list li{
     list-style-type: none;
 }
 .todos-list li {
-    margin-top: 20px;
+    padding-top: 10px;
 }
 .todos-list li.done {
     text-decoration: line-through;
 }
 #txt_done, #all_is_done {
-    position: relative;
-    left: 300px;
-    top: -170px;
+    position: absolute;
+    left: 315px;
+    top: 130px;
 }
 #txt_new_task {
-    position: relative;
-    left: 107px;
-    top: -120px;
+    position: absolute;
+    left: 315px;
+    top: 185px;
 }
 #all_is_done {
-    position: relative;
-    left: 320px;
-    top: -165px;
+    position: absolute;
+    left: 495px;
+    top: 125px;
     width: 20px;
     height: 20px;
     cursor: pointer;
 }
 #new_task {
-    position: relative;
-    left: 34px;
-    height: 85px;
-    top: -50px;
+    position: absolute;
+    left: 315px;
+    height: 35px;
+    width: 197px;
+    top: 210px;
 }
 #add {
-    position: relative;
-    left: -142px;
-    top: 28px;
+    position: absolute;
+    left: 315px;
+    top: 260px;
 }
 #txt_done {
     cursor: pointer;
 }
+#txt-delete {
+    position: absolute;
+    left: 315px;
+    top: 310px;
+}
+#statistics {
+    position: absolute;
+    left: 315px;
+    top: 365px;
+}
+#statistics-done {
+    position: absolute;
+    left: 315px;
+    top: 390px;
+}
+#statistics-not-done {
+    position: absolute;
+    left: 315px;
+    top: 415px;
+}
+
