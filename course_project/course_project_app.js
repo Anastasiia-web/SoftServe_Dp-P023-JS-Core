@@ -23,7 +23,7 @@ const todos = [
 
 function render(data) {
     const list = document.querySelector('.todos-list');
-
+    statistics();
     list.innerHTML = data.map(todo => {                         //создали массив data через map, todo - объект из массива
         const className = todo.isDone ? 'class="done"' : "";
         return `<li ${className} data-id = ${todo.id}>${todo.text}<li>`;
@@ -33,10 +33,10 @@ function render(data) {
 function onTodoClick(ev){
     console.log('click to todo', ev.target);   
     console.dir(ev.target);                               //console.dir(ev.target); посмотреть на свойства в консоли
-                                                
-    const id = +ev.target.dataset.id;            // const id = ev.target.dataset.id;  добираемся через айди елемента
+                                            
+    const id = ev.target.dataset.id;            // const id = ev.target.dataset.id;  добираемся через айди елемента!!!Если ID цифра, то id = +ev.target.dataset.id;
 
-    todos.forEach(todo => todo.id === id ? todo.isDone = !todo.isDone : null);  
+    todos.forEach(todo => todo.id == id ? todo.isDone = !todo.isDone : null);  
 
     render(todos);
 }
@@ -57,7 +57,7 @@ function onCheckAllChange(){
 
 function add_new_task() {
     let a = document.querySelector('#new_task');
-    todos.push(generateListItem(a.value));
+    todos.unshift(generateListItem(a.value));
     a.value = '';
     render(todos);
 }
@@ -67,39 +67,35 @@ function generateListItem(text = 'default text') {
     return {
         text,                                                // если совпадает, можно не повторять text
         isDone : false,
-        id : (new Date()).valueOf().toString(16)             //генерация уникального айди в 16ричном виде через функцию времени
+        id : (new Date()).valueOf().toString(16)         //генерация уникального айди в 16ричном виде через функцию времени
     }
 }
 
 
-// готово: работает удаление, но на всё поле
-const list = document.querySelector('.todos-list');
-
-list.oncontextmenu = function(event) {
-    event.preventDefault();
-    list.innerHTML = '';
-    todos.length = 0;
-  };
-
-// готова статистика, но не учитываются изменения
-
-function statDone() {
-
-    const statisticsIsDone = todos.filter(item => item.isDone == true);
-    const y = document.querySelector('#statistics-done');
-
-    y.innerHTML = `Done: ${statisticsIsDone.length}`;
+function ClickDelete(ev){
+    const id = ev.target.dataset.id;                    // const id = ev.target.dataset.id;  добираемся через айди елемента
+    const index = todos.findIndex(n => n.id == id);
+    if (index !== -1) {
+    todos.splice(index, 1);
     render(todos);
-    }
+}
+};
 
-statDone();
-
-
-let statisticsIsNotDone = todos.filter(item => item.isDone == false);
-let z = document.querySelector('#statistics-not-done');
-z.innerHTML = `Not done: ${statisticsIsNotDone.length}`;
+document.querySelector('.todos-list').addEventListener('contextmenu', ClickDelete);
 
 
+function statistics() {
+    //const generalStatictics = document.querySelector('#statistics');
+    const doneStatictics = document.querySelector('#statistics-done');
+    const notDoneStatictics = document.querySelector('#statistics-not-done');
+    const statisticsGeneral = todos.length;
+    const statisticsIsDone = todos.filter(item => item.isDone == true);
+    const statisticsIsNotDone = todos.filter(item => item.isDone == false);
+
+    document.querySelector('#statistics').innerHTML = `You have ${statisticsGeneral} tasks.`
+    doneStatictics.innerHTML = `Done: ${statisticsIsDone.length}`;
+    notDoneStatictics.innerHTML = `Not done: ${statisticsIsNotDone.length}`;
+}
 
 
 
@@ -130,7 +126,16 @@ all_is_done.onclick = function everything_done(){
 }
 */
 
+/*
+// готово: работает удаление, но на всё поле
+const list = document.querySelector('.todos-list');
 
+list.oncontextmenu = function(event) {
+    event.preventDefault();
+    list.innerHTML = '';
+    todos.length = 0;
+  };
+*/
  // странно, работает удаление после клика при клике на поле !!! https://learn.javascript.ru/introduction-browser-events
  /*
 document.querySelector('#delete_todo').addEventListener('click', deleteTodo);
