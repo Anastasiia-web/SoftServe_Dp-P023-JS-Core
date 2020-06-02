@@ -35,9 +35,9 @@ body {
     top: 320px;
     left: 450px;
 }
-.c {
+.e {
     top: 450px;
-    left: 650px;
+    left: 630px;
 }
 .d {
     top: 320px;
@@ -45,7 +45,11 @@ body {
     padding-left: 40px;
     padding-right: 40px;
 }
-.e {
+.c {
     top: 450px;
-    left: 300px;
+    left: 350px;
+}
+.f {
+    top: 450px;
+    left: 960px;
 }
