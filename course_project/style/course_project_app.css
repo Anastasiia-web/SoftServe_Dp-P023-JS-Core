@@ -10,7 +10,7 @@ body {
 .title1 {
     position: absolute;
     top: 280px;
-    left: 1070px;   
+    left: 1020px;   
     width: 200px;
     height: 100px;
     background-image: url(js-todo-title.png);
