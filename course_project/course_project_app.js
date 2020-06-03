@@ -75,6 +75,7 @@ function generateListItem(text = 'default text') {
 function ClickDelete(ev){
     const id = ev.target.dataset.id;                    // const id = ev.target.dataset.id;  добираемся через айди елемента
     const index = todos.findIndex(n => n.id == id);
+    event.preventDefault();
     if (index !== -1) {
     todos.splice(index, 1);
     render(todos);
