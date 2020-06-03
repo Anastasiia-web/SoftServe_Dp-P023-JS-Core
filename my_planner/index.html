@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My planner</title>
     <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
@@ -13,48 +13,80 @@
         <span id="h3"><b> Students info </b></span>
     </div>
     <div class="this-week">
-        <div class="monday">Monday</div>
-        <div class="tuesday">Tuesday</div>
-        <div class="wednesday">Wednesday</div>
-        <div class="thursday">Thursday</div>
-        <div class="friday">Friday</div>
-        <div class="saturday">Saturday</div>
-        <div class="sunday">Sunday</div>
-        <input type="text" class="this-week-lesson" placeholder="Next lesson">
-        <div class="buttons">
-            <button>MON</button>
-            <button>TUE</button>
-            <button>WED</button>
-            <button>THU</button>
-            <button>FRI</button>
-            <button>SAT</button>
-            <button>SUN</button>
+        <div class="day-monday">
+            <span>Monday</span>
+            <div class="monday"></div>
         </div>
+        <div class="day-tuesday">
+            <span>Tuesday</span>
+            <div class="tuesday"></div>
+        </div>
+        <div class="day-wednesday">
+            <span>Wednesday</span>
+            <div class="wednesday"></div>
+        </div>
+        <div class="day-thursday">
+            <span>Thursday</span>
+            <div class="thursday"></div>
+        </div>
+        <div class="day-friday">
+            <span>Friday</span>
+            <div class="friday"></div>
+        </div>
+        <div class="day-saturday">
+            <span>Saturday</span>
+            <div class="saturday"></div>
+        </div>
+        <div class="day-sunday">
+            <span>Sunday</span>
+            <div class="sunday"></div>
+        </div>
+        <input type="text" class="input-this-week-lesson" placeholder="Next lesson">
     </div>
     <div class="next-week">
-        <div class="monday">Monday</div>
-        <div class="tuesday">Tuesday</div>
-        <div class="wednesday">Wednesday</div>
-        <div class="thursday">Thursday</div>
-        <div class="friday">Friday</div>
-        <div class="saturday">Saturday</div>
-        <div class="sunday">Sunday</div>
-        <input type="text" class="this-week-lesson" placeholder="Next lesson">
-        <div class="buttons">
-            <button>MON</button>
-            <button>TUE</button>
-            <button>WED</button>
-            <button>THU</button>
-            <button>FRI</button>
-            <button>SAT</button>
-            <button>SUN</button>
+        <div class="day-monday">
+            <span>Monday</span>
+            <div class="monday"></div>
         </div>
+        <div class="day-tuesday">
+            <span>Tuesday</span>
+            <div class="tuesday"></div>
+        </div>
+        <div class="day-wednesday">
+            <span>Wednesday</span>
+            <div class="wednesday"></div>
+        </div>
+        <div class="day-thursday">
+            <span>Thursday</span>
+            <div class="thursday"></div>
+        </div>
+        <div class="day-friday">
+            <span>Friday</span>
+            <div class="friday"></div>
+        </div>
+        <div class="day-saturday">
+            <span>Saturday</span>
+            <div class="saturday"></div>
+        </div>
+        <div class="day-sunday">
+            <span>Sunday</span>
+            <div class="sunday"></div>
+        </div>
+        <input type="text" class="input-this-week-lesson" placeholder="Next lesson">
     </div>
     <div class="students-info">
         <div class="students-profiles">
-            <button id="add-new-student">Add new student</button>
-            <div class="photo"></div>
-            <div class="profiles"></div>
+            <a href="students_form/students_form.html" id="add-new-student"> Add new student </a>
+            <div class="photo-best-students">
+                <div class="first-place-student-photo"></div>
+                <div class="second-place-student-photo"></div>
+                <div class="third-place-student-photo"></div>
+            </div>
+            <div class="profiles">
+                <div class="first-place-student-info"></div>
+                <div class="second-place-student-info"></div>
+                <div class="third-place-student-info"></div>
+            </div>
         </div>
         <div class="current-info">
             <input type="text" class="input-info-to-remember" placeholder="Info to remember">
@@ -63,7 +95,7 @@
                 <button id="btn-info-deposit">Deposit</button>
                 <button id="btn-info-loan">Loan</button>
             </div>
-            <div class="notes"></div>
+            <ul class="notes"></ul>
         </div>
     </div>
     <script src="main.js"></script>
