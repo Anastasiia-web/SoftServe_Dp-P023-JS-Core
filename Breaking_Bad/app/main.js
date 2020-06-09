@@ -1,41 +1,38 @@
-
 function sound(ev) {
-    var audio = new Audio(); // Создаём новый элемент Audio ??
-    audio.src = 'Fujiya_amp'; 
+    var audio = new Audio(); 
+    audio.src = 'audio/Fujiya_amp';
     audio.autoplay = true; 
 }
 
 document.querySelector('#music_on').addEventListener('click', sound);
 
 
-// работающее, но с ошибкой если щелкнуть на фото
 const todosPhotos = [ 
     {
         text : 'Walter', 
-        id : 1,
-        photo : `<img src="style/images/Walter.jpg" width="100" height="135">`
+        photo : `style/images/Walter.jpg`
     },
     {   text : 'Jesse', 
-        id : 2,
-        photo : `<img src="style/images/Jesse.jpg" width="100" height="135">`
+        photo : `style/images/Jesse.jpg`
     },
     {
         text : 'Skyler', 
-        id : 3,
-        photo : `<img src="style/images/Skyler.jpg" width="100" height="135">`
+        photo : `style/images/Skyler.jpg`
     }
     ]
 
 function render(data){
     const list = document.querySelector('.photos');
     list.innerHTML = data.map(todo => `<div style="padding: 30px;"> 
-    <li> ${todo.photo} </li> 
-    <li style="padding-left: 27px; cursor: pointer"> ${todo.text} </li> 
+    <li> 
+        <img data-name="${todo.text}" src="${todo.photo}" width="100" height="135">
+    </li> 
+    <li data-name="${todo.text}" style="padding-left: 27px; cursor: pointer"> ${todo.text} </li> 
     </div>`).join('');
 }
 
 function onPhotoClick(ev){
-    const textName = ev.target.parentElement.innerText;
+    const textName = ev.target.dataset.name;
     const str = textName.replace(/\s+/g, '');
     const url = `https://www.breakingbadapi.com/api/characters?name=${str}`;
         
@@ -807,3 +804,48 @@ const ar = document.querySelector('.photos');    // для одного .Walter-
     background-image: url(images/Tuco.jpg);
 }
 */
+/*
+// начало до консультации РЕНДЕР обращается к общему классу
+function sound(ev) {
+    var audio = new Audio(); // Создаём новый элемент Audio ??
+    audio.src = 'audio/Fujiya_amp';
+    audio.autoplay = true; 
+}
+
+document.querySelector('#music_on').addEventListener('click', sound);
+
+
+const todosPhotos = [ 
+    {
+        text : 'Walter', 
+        photo : `<img src="style/images/Walter.jpg" width="100" height="135">`
+    },
+    {   text : 'Jesse', 
+        photo : `<img src="style/images/Jesse.jpg" width="100" height="135">`
+    },
+    {
+        text : 'Skyler', 
+        photo : `<img src="style/images/Skyler.jpg" width="100" height="135">`
+    }
+    ]
+
+function render(data){
+    const list = document.querySelector('.photos');
+    list.innerHTML = data.map(todo => `<div style="padding: 30px;"> 
+    <li> ${todo.photo} </li> 
+    <li style="padding-left: 27px; cursor: pointer"> ${todo.text} </li> 
+    </div>`).join('');
+}
+
+function onPhotoClick(ev){
+    const textName = ev.target.parentElement.innerText;
+    const str = textName.replace(/\s+/g, '');
+    const url = `https://www.breakingbadapi.com/api/characters?name=${str}`;
+        
+    fetch(url).then(req => {
+        console.log(req);
+        return req.json();
+    }).then(data => renderHeroPhoto(data));
+}
+*/
+
