@@ -30,7 +30,7 @@ function render(data){
     const list = document.querySelector('.photos');
     list.innerHTML = data.map(todo => `<div style="padding: 30px;"> 
     <li> ${todo.photo} </li> 
-    <li style="padding-left: 25px; cursor: pointer"> ${todo.text} </li> 
+    <li style="padding-left: 27px; cursor: pointer"> ${todo.text} </li> 
     </div>`).join('');
 }
 
@@ -73,13 +73,14 @@ function onPhotoClick(ev){
             strSts.style.fontSize = '15px';
             } else if(heroStatus == `Presumed dead`) {
                 strSts.style.color = 'red';
-                strSts.style.fontSize = '25px';
+                strSts.style.fontSize = '20px';
+                strSts.style.fontWeight = 'bold';
             } else if(heroStatus == `Alive`) {
                 strSts.style.color = 'yellow';
                 strSts.style.fontSize = '15px';
             } else if(heroStatus == `Deceased`) {
                 strSts.style.color = 'black';
-                strSts.style.fontSize = '25px';
+                strSts.style.fontSize = '20px';
                 strSts.style.fontWeight = 'bold';
             }
     }
@@ -132,13 +133,14 @@ function getCharacterDrop() {
                 strSts.style.fontSize = '15px';
             } else if(heroStatus == `Presumed dead`) {
                 strSts.style.color = 'red';
-                strSts.style.fontSize = '30px';
+                strSts.style.fontSize = '20px';
+                strSts.style.fontWeight = 'bold';
             } else if(heroStatus == `Alive`) {
                 strSts.style.color = 'yellow';
                 strSts.style.fontSize = '15px';
             } else if(heroStatus == `Deceased`) {
                 strSts.style.color = 'black';
-                strSts.style.fontSize = '25px';
+                strSts.style.fontSize = '20px';
                 strSts.style.fontWeight = 'bold';
             }
     }
