@@ -28,20 +28,20 @@ body {
     transition: all 0.4s ease 0s;
 }
 .a {
-    top: 100px;
-    left: 650px;
+    top: 350px;
+    left: 610px;
 }
 .b {
     top: 220px;
     left: 450px;
 }
 .e {
-    top: 350px;
+    top: 100px;
     left: 630px;
 }
 .d {
     top: 220px;
-    left: 750px;
+    left: 870px;
     padding-left: 40px;
     padding-right: 40px;
 }
@@ -57,4 +57,8 @@ body {
     transform: skew(0, 30deg);
     top: 500px;
     left: 655px;
+}
+.h {
+    top: 220px;
+    left: 650px;
 }
