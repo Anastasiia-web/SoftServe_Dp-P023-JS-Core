@@ -1,4 +1,4 @@
-// работает без сохранения подсчета предыдущих очков :(
+// ДВА ВОПРОСА: подсчет очков? глючит, если выбирать 1,2 подряд и основится на третьем варианте?
 const level1 = document.querySelector('#first-level');
 const level2 = document.querySelector('#second-level');
 const level3 = document.querySelector('#third-level');
