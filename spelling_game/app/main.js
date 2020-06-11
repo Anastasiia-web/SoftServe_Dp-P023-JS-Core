@@ -5,6 +5,7 @@ const level3 = document.querySelector('#third-level');
 const userInput = document.querySelector('#user-input');
 const userScore = document.querySelector('#score');
 const GivenWordForSpelling = document.querySelector('#word-for-spelling'); 
+let points = 0;
 
 const words = [
     'intelligence', 'weird', 'acceptable', 'accidentally', 'accommodate', 'acquire', 'believe', 'changeable', 'conscientious', 'definitely', 'discipline', 'embarrassment', 'equipment', 'exceed', 'existence', 'experience', 'foreign', 'guarantee', 'hierarchy', 'harass', 'height', 'immediate', 'jewelry', 'judgment', 'leisure', 'license', 'maintenance', 'misspell', 'neighbour', 'boulevard', 'occasionally', 'occurrence', 'possession', 'privilege', 'pronunciation', 'questionnaire', 'receipt', 'recommend', 'referred', 'reference', 'relevant', 'schedule', 'twelfth', 'until', 'weather', 'assessment', 'actually', 'acknowledgment', 'assessment', 'advantageous', 'aggressive'
@@ -28,14 +29,12 @@ randWord();
 function count() {  
     const GivenWordForSpellingInnerHTML = GivenWordForSpelling.innerHTML; 
     const userInputValue = userInput.value;
- 
-    let points = 0;
    
     if(userInputValue == GivenWordForSpellingInnerHTML) {
         result.innerHTML = 'Well done!';
         userInput.value = '';       
             points += 1;
-            userScore.innerHTML = `Score: ${points}`;
+            userScore.innerHTML = `Score: ${points} <i class="fas fa-beer"></i>`;
     } else {
         function red(){
             userInput.style.color = 'red';
@@ -46,6 +45,7 @@ function count() {
         setTimeout( red);
         setTimeout( black, 3000 );
         result.innerHTML = 'Oops, try again!';
+        userScore.innerHTML = `Score: ${points}`;
     }  
 }
 
@@ -61,9 +61,8 @@ function show() {
 
 
 function firstLevel() {
-    level1.style.backgroundColor = 'greenyellow';
-    level2.style.backgroundColor = 'white';
-    level3.style.backgroundColor = 'white';
+    level2.style.color = 'white';
+    level3.style.color = 'white';
 
 getWord();
 
@@ -77,9 +76,8 @@ document.querySelector('#first-level').addEventListener('click', firstLevel);
 
 
 function SecondLevel() {
-    level2.style.backgroundColor = 'greenyellow';
-    level1.style.backgroundColor = 'white';
-    level3.style.backgroundColor = 'white';
+   level1.style.color = 'white';
+   level3.style.color = 'white';
 
 getWord();
 
@@ -99,9 +97,8 @@ document.querySelector('#second-level').addEventListener('click', SecondLevel);
 
 
 function thirdLevel() {
-    level3.style.backgroundColor = 'greenyellow';
-    level1.style.backgroundColor = 'white';
-    level2.style.backgroundColor = 'white';
+    level1.style.color = 'white';
+    level2.style.color = 'white';
 
 getWord();
 
