@@ -54,11 +54,15 @@ body {
     left: 960px;
 }
 .g {
-    transform: skew(0, 30deg);
+    transform: skew(0, 25deg);
     top: 500px;
-    left: 655px;
+    left: 815px;
 }
 .h {
     top: 220px;
     left: 650px;
+}
+.i {
+    top: 500px;
+    left: 500px;
 }
