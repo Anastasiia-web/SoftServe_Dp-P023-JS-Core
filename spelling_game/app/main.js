@@ -1,4 +1,4 @@
-// ДВА ВОПРОСА: подсчет очков? глючит, если выбирать 1,2 подряд и основится на третьем варианте?
+// глючит, если выбирать 1,2 подряд и основится на третьем варианте ?
 const level1 = document.querySelector('#first-level');
 const level2 = document.querySelector('#second-level');
 const level3 = document.querySelector('#third-level');
@@ -7,9 +7,19 @@ const userScore = document.querySelector('#score');
 const GivenWordForSpelling = document.querySelector('#word-for-spelling'); 
 let points = 0;
 
-const words = [
-    'intelligence', 'weird', 'acceptable', 'accidentally', 'accommodate', 'acquire', 'believe', 'changeable', 'conscientious', 'definitely', 'discipline', 'embarrassment', 'equipment', 'exceed', 'existence', 'experience', 'foreign', 'guarantee', 'hierarchy', 'harass', 'height', 'immediate', 'jewelry', 'judgment', 'leisure', 'license', 'maintenance', 'misspell', 'neighbour', 'boulevard', 'occasionally', 'occurrence', 'possession', 'privilege', 'pronunciation', 'questionnaire', 'receipt', 'recommend', 'referred', 'reference', 'relevant', 'schedule', 'twelfth', 'until', 'weather', 'assessment', 'actually', 'acknowledgment', 'assessment', 'advantageous', 'aggressive'
-]
+const words = [];
+
+function loadDefaultData() {                           // AJAX ассинхронный JS и XML
+
+    const aja = new XMLHttpRequest();                  //создаем объект AJAX
+    aja.onload = () => {
+        const data = JSON.parse(aja.responseText);
+        console.log(data);
+        words.push(...data);
+    }        
+    aja.open('GET', './data/data.json');               //указываем куда и как мы делаем запрос
+    aja.send();
+}
 
 
 function getWord(){
@@ -61,6 +71,7 @@ function show() {
 
 
 function firstLevel() {
+    level1.style.color = 'black';
     level2.style.color = 'white';
     level3.style.color = 'white';
 
@@ -76,6 +87,7 @@ document.querySelector('#first-level').addEventListener('click', firstLevel);
 
 
 function SecondLevel() {
+   level2.style.color = 'black';
    level1.style.color = 'white';
    level3.style.color = 'white';
 
@@ -99,6 +111,7 @@ document.querySelector('#second-level').addEventListener('click', SecondLevel);
 function thirdLevel() {
     level1.style.color = 'white';
     level2.style.color = 'white';
+    level3.style.color = 'black';
 
 getWord();
 
@@ -113,6 +126,10 @@ document.querySelector('#user-input').addEventListener('change', count);
 }
 
 document.querySelector('#third-level').addEventListener('click', thirdLevel);
+
+
+//загрузка данных из файла  // JSON только двойные кавычки везде
+loadDefaultData();
 
 
 
